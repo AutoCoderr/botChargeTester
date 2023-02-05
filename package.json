@@ -1,0 +1,28 @@
+{
+  "name": "botchargetester",
+  "version": "1.0.0",
+  "description": "A program to test charge on discord and discord bots",
+  "main": "start.js",
+  "scripts": {
+    "start": "tsc && node --trace-deprecation --trace-warnings start.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AutoCoderr/botChargeTester.git"
+  },
+  "author": "AutoCoderr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AutoCoderr/botChargeTester/issues"
+  },
+  "homepage": "https://github.com/AutoCoderr/botChargeTester#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.41",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.14.0",
+    "discord.js": "^14.7.1"
+  }
+}
