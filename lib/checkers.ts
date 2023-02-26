@@ -37,7 +37,7 @@ export function rateSpammerChecker(config: IConfig): number[] {
                 throw new Error("Server '"+serverConfig.id+"' has nothing text channel whereas you have defined 'nbMessages'");
             }
 
-            if (config.nbVocalConnections === undefined || config.vocalsDuration === undefined)
+            if (config.nbVocalConnections === undefined)
                 return 0;
             
 
@@ -51,7 +51,7 @@ export function rateSpammerChecker(config: IConfig): number[] {
     
             const maxVocalDuration = Math.floor(config.duration/nbSimultaneousVocals);
     
-            if (<number>config.vocalsDuration <= maxVocalDuration) {
+            if (config.vocalsDuration === undefined || <number>config.vocalsDuration <= maxVocalDuration) {
                 return nbSimultaneousVocals;
             }
     
